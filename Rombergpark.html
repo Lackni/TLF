@@ -1,35 +1,153 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TLF-Rombergpark</title>
+    <title>TLF - Rombergpark</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 0.8; 
+  cursor: pointer; 
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container */
+.container {
+  position: relative;
+  display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+/* Closable button inside the expanded image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+</style>
 </head>
-
-<p>
-    <h1>Rombergpark</h1>
-</p>
-
-    <h6><a href="Meine Bilder.html">Zurück zu "Meine Bilder"</a></h6>
-
-
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="Kontakt.html">TL - Fotografie</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="TLF.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <!--<a class="nav-link" href="#">Link</a>-->
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Meine Galerie
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="Halde Schurenberg.html">Halde Schurenberg</a></li>
+              <li><a class="dropdown-item" href="Halde Hoheward.html">Halde Hoheward</a></li>
+              <li><a class="dropdown-item" href="Rombergpark.html">Rombergpark</a></li>
+              <li><a class="dropdown-item" href="">Zeche Ewald Sonnenuntergang</a></li>
+              <li><a class="dropdown-item" href="Zeche Ewald Förderturm.html">Zeche Ewald Förderturm</a></li>
+              <li><a class="dropdown-item" href="Halde Haniel.html">Halde Haniel</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <!--<a class="nav-link disabled">Disabled</a>-->
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 <body>
-    <body style="background-color:rgb(69, 68, 70);"></body>
-   <h3>
-        <figcaption>Kirschbaumallee</figcaption>
-        <img src="Bilder/Rombergpark/IMG_2014.jpeg" height="500">
-        <figcaption>Brunnenspiegelung</figcaption>
-        <img src="Bilder/Rombergpark/IMG_2042.jpeg" height="500">
-        <figcaption>Baum s/w</figcaption>
-        <img src="Bilder/Rombergpark/IMG_2047.jpeg" height="500">
-        <figcaption>Baum dörr</figcaption>
-        <img src="Bilder/Rombergpark/IMG_2049.jpeg" height="500">
-    </h3>
 
-    <p>
-        <h6><a href="Meine Bilder.html">Zurück zu "Meine Bilder"</a></h6>
-    </p>
 
+
+
+<!--*************************************************************Bilder Anzeige******************************************************************************-->
+<div style="text-align:center">
+  <h2>Rombergpark:</h2>
+  <p>Zum vergrössern, auf ein Foto clicken:</p>
+</div>
+
+<!-- The four columns -->
+<div class="row">
+  <div class="column">
+    <img src="Bilder/Rombergpark/IMG_1992.jpeg" alt="Mann s/w" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="Bilder/Rombergpark/IMG_2087.jpeg" alt="Fernsehturm" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="Bilder/Rombergpark/IMG_2004.jpeg" alt="Kirchblütenallee" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="Bilder/Rombergpark/IMG_2042.jpeg" alt="Baum Spiegelung" style="width:100%" onclick="myFunction(this);">
+  </div>
+</div>
+
+
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg" style="width:90%">
+  <div id="imgtext"></div>
+</div>
+
+<script>
+function myFunction(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  expandImg.parentElement.style.display = "block";
+}
+</script>
 </body>
-
+</body>
+</html>
