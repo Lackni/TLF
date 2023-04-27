@@ -1,11 +1,18 @@
 body{
-    background-color:rgb(227, 227, 227);
+    background-color:rgb(55, 163, 57);
 }
 
 #box1{
     height: 100%;
     width: 100%;
+    background-color: red;
 }
 h1{
-    color: blanchedalmond;
+    color: rgb(253, 197, 255);
 }
+
+
+
+
+
+
