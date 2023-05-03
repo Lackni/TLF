@@ -1,12 +1,12 @@
 .navbar {
     overflow: hidden;
-    background-color: #333;
+    /*background-color: #333;*/
   }
   
   .navbar a {
     float: left;
-    font-size: 16px;
-    color: white;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -18,10 +18,10 @@
   }
   
   .dropdown .dropbtn {
-    font-size: 16px;  
+    font-size: 20px;  
     border: none;
     outline: none;
-    color: white;
+    color: rgb(5, 5, 5);
     padding: 14px 16px;
     background-color: inherit;
     font-family: inherit;
@@ -29,7 +29,7 @@
   }
   
   .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: red;
+    background-color: rgb(196, 192, 192);
   }
   
   .dropdown-content {
@@ -43,7 +43,7 @@
   
   .dropdown-content a {
     float: none;
-    color: black;
+    color: rgb(0, 0, 0);
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -202,4 +202,8 @@
   
   .hover-shadow:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  body {
+    background-image: url(Bilder/HaldeHaniel/Halde\ Haniel_2.jpg);
+    background-size: 100%; 
   }
