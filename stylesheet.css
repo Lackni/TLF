@@ -206,5 +206,6 @@
   }
   body {
     background-image: url(Bilder/HaldeHaniel/Halde\ Haniel_2.jpg);
-    background-size: 100%; 
+    background-repeat: no-repeat;
+    background-size: cover;
   }
