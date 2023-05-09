@@ -208,6 +208,8 @@
     background-image: url(Bilder/HaldeHaniel/Halde\ Haniel_2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: Verdana, sans-serif;
+    margin: 0;
   }
 
  /*.buttoninst{
