@@ -27,9 +27,9 @@
     font-family: inherit;
     margin: 0;
   }
-  
+  /*hintergrundfarbe bei hover in Navbar*/
   .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: rgb(196, 192, 192);
+    background-color: rgba(155, 187, 243, 0.215);
   }
   
   .dropdown-content {
@@ -219,4 +219,22 @@
   
 
  }*/
+ /* .button1{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight:lighter
+    letter-spacing: 5px;
+    font-size: 20px;
+    border-radius: 50px;
+    color: #fff;
+    background: radial-gradient(circle at 10% 20%,
+    #fdf497 0%,
+    #fdf497 15%,
+    #fd5949 45%
+    #d4249f 70%
+    #401aJ 95%);
+  }*/
+
   
+
+ 
